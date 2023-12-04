@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: staging_example_one
+    description: "First layer of my NHL Standings where records are not deleted"
+    columns:
+      - name: _fivetran_deleted
+        description: "Fivetran's soft delete record"
+        tests:
+          - accepted_values:
+              values: ['False']
+  - name: staging_example_two
+    description: "A starter dbt model"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+          - accepted_values:
+              values: [12345]
