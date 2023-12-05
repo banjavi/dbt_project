@@ -1,5 +1,5 @@
 with source_data as (
-    select max(_fivetran_synced) as most_recent_sync from {{ source('animal_crossing', 'insects') }}
+    select max(_fivetran_synced) as most_recent_sync from {{ source('sql_server_rds', 'insects') }}
     where _fivetran_deleted = 'False'
 )
 
