@@ -4,7 +4,7 @@ sources:
 # Sources listed below should closely resemble the names of your Fivetran connectors. Names are at your descretion. Schema's will mirror your destination schemas.
 
   - name: animal_crossing_animals # this can be whatever I want
-    schema: animal_crossing # Connector and first schema name for connector with MULTIPLE SCHEMAS
+    schema: sql_server_rds # Connector and first schema name for connector with MULTIPLE SCHEMAS
     tables:
       - name: fish
       - name: insects
